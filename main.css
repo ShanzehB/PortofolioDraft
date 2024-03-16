@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+
+html {
+ /* defining our color palette */
+    --color-primary: hsl(252, 43%, 40%);
+    --color-secondary: hsl(0, 0%, 100%);
+    --color-tertiary: hsl(353, 74%, 85%);
+    --color-bg:#979fc9;
+    --borderc:#b61f72;
+    --borderl: #a19212;
+    --small-spacing: 8px;
+    --medium-spacing: 16px;
+    --large-spacing: 24px;
+    --fontp: "Indie Flower", sans-serif; 
+    --fonth: "Dancing Script", sans-serif;
+    --fonts: "Style Script", cursive;
+    --fontc: "Calistoga", serif;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontc);
+    color: var(--borderc);
+    margin-bottom: var(--medium-spacing);
+    margin: auto;
+}
+
+
+body {
+    /* here we use the combo of calc() and our variables 
+      to create standardized, flexible spacing layouts
+    */
+    color: var(--color-secondary);
+    background-color: var(--color-bg);
+  
+    padding: var(--medium-spacing) calc(2 * var(--medium-spacing));
+    max-width: 100ch;
+    color: var(--color-secondary);
+    font-family: var(--fontc);
+    margin: auto;
+}
+
+.title, .author {
+    color: var(--color-primary);
+}
+
+.title {
+    font-weight: 1000;
+    font-family: var(--fonts);
+    line-height: 1;/*controls the space between the title lines*/
+    margin: 0;
+    padding-top: 5rem;
+    /*font-size: clamp(1.5rem, 10vw, 10rem);*/
+    font-size: 5rem;
+    font-style: normal;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin: auto;
+}
+
+
+p {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-left: auto; /* forces to furthest right side, auto takes up as much space */
+    margin-right: auto; /* in tandem with margin-left, sets to center */
+}
+
+.spacer {
+    height: var(--medium-spacing);
+}
+
+figure {
+    max-width: 400px;/*fixed max width for all interfaces*/ 
+    margin: auto; /* centers; calculates the size of the whole page for this */
+    margin-top: 20px;
+  }
+
+.pic {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;/*Preserves the same abstrat ratio so that the image doesnt stretch it out; contain will make it stay the same unless the space gets smaller then it readjusts */
+    line-height: 0;
+    background-color: var(--color-secondary);
+    padding: 20px;/*paddings and border helps with spacing; helps give element breathing room; better than margin*/
+    border: 10px solid var(--borderl);/*is the frame */
+  }
+
+  
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+btn:hover {
+   background-color: #a19212;
+}
+
